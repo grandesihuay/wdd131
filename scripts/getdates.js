@@ -1,7 +1,9 @@
-// actual year
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
+// getdates.js – WDD 131 Dynamic Web Fundamentals
 
-// last update of the document
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = "Last Modification: " + lastModified;
+// 1. Populate the current copyright year dynamically
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").innerHTML = currentYear;
+
+// 2. Populate the last modified date of the document
+document.getElementById("lastModified").innerHTML =
+  "Last Modification: " + document.lastModified;

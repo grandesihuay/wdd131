@@ -1,125 +1,280 @@
-* {
+/* =============================================
+   WDD 131 – Dynamic Web Fundamentals
+   base.css – Main Stylesheet
+   ============================================= */
+
+/* --- CSS Variables / Color Schema --- */
+:root {
+  --color-primary:    #1e3a5f;   /* dark navy – header, card headings */
+  --color-secondary:  #2e5d8e;   /* medium blue – hover accents */
+  --color-accent:     #f0c040;   /* gold – footer link highlight */
+  --color-bg:         #f5f7fa;   /* light page background */
+  --color-card-bg:    #ffffff;   /* card background */
+  --color-text:       #222222;   /* main text */
+  --color-text-light: #ffffff;   /* text on dark backgrounds */
+  --color-footer-bg:  #1e3a5f;
+  --color-footer-txt: #ffffff;
+  --color-modified:   #f0c040;
+
+  --font-heading: 'Merriweather', Georgia, serif;
+  --font-body:    'Open Sans', Arial, sans-serif;
+
+  --max-width: 960px;
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-    font-family: "Merriweather", serif;
-    line-height: 1.6;
-    color: #222;
-    background-color: #f9f9f9;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
 }
 
-/* ------ Header ------*/
-
+/* =============================================
+   HEADER
+   ============================================= */
 header {
-    background-color: #003366; /* Azul oscuro */
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0.75rem 1rem 0;
 }
 
-header span#course-title {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
+/* Course title span displayed as block so it centers easily */
+#course-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 0;
 }
 
-/* ------- Nav ----------*/
-
+/* --- Navigation --- */
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #162e4d;
+  margin-top: 0.5rem;
+  padding: 0;
 }
 
-nav a{
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-nav a:hover{
-    background-color: #ffcc00; /* Hover amarillo */
-    color: #000;
+nav a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
-/* ------- main ----- */
-
+/* =============================================
+   MAIN
+   ============================================= */
 main {
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
   padding: 0 1rem;
 }
 
 main h1 {
-  grid-column: 1 / -1;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
   text-align: center;
-  font-family: 'Merriweather', serif;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
 }
 
+/* --- Cards Grid --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
 
-/* ----------- cards ------- */
-
+/* --- Individual Card --- */
 .card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .card h2 {
-    font-family: 'Merriweather', serif;
-    color: #003366;
-    margin-bottom: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  letter-spacing: 0.02em;
 }
 
-/* text and images - card */
-
-.card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin: 0.5rem 0;
+/* =============================================
+   CARD 1 – ABOUT ME
+   ============================================= */
+.about-content {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.about-text hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 1rem 0;
+}
+
+.about-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Hometown section: flag + text side by side */
+.hometown {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hometown figure {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.hometown figure img {
+  width: 120px;
+  height: auto;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.hometown figcaption {
+  font-size: 0.78rem;
+  color: #555;
+  margin-top: 0.3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.hometown p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Profile photo */
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* =============================================
+   CARD 2 – WEB DEV RESOURCES
+   ============================================= */
 .card ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
+  list-style: disc;
+  padding: 1.25rem 1.25rem 1.25rem 2rem;
 }
+
 .card ul li {
-  margin: 0.5rem 0;
+  margin-bottom: 0.6rem;
 }
-.card ul li a {
-  color: #003366;
+
+.card ul a {
+  color: var(--color-secondary);
   text-decoration: none;
-  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
-.card ul li a:hover {
+
+.card ul a:hover {
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
-/* ------ footer ------------- */
-
+/* =============================================
+   FOOTER
+   ============================================= */
 footer {
-  background-color: #003366;
-  color: #fff;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-txt);
   text-align: center;
-  padding: 1rem;
+  padding: 1.25rem 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
 }
 
-footer p {
-  margin: 0.3rem 0;
+footer p:first-child {
+  margin-bottom: 0.4rem;
 }
 
-footer #lastModified {
-  color: #ffcc00;
-  font-weight: 500;
+#lastModified {
+  color: var(--color-modified);
+  font-size: 0.85rem;
+}
+
+/* =============================================
+   RESPONSIVE – smaller screens
+   ============================================= */
+@media (max-width: 700px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .profile-photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    text-align: center;
+  }
 }

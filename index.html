@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Billy Grande</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Billy Grande | HTML, CSS and Javascript.">
-    <meta name="author" content="Billy Grande">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Billy Grande</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Billy Grande. Personal homepage featuring an about me section, hometown information, and web development resources." />
+  <meta name="author" content="Billy Grande" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
-        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="https://www.linkedin.com/in/billy-grande-sihuay/" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=spa&id=p11-p12#p11" target="_blank">Scripture</a>
-            <a href="https://grandesihuay.github.io/wdd131/" target="_blank">Final Project</a>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>Billy Grande</h1>
-        
-        <section class="card">
-            <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod doloribus deleniti! Beatae laboriosam temporibus quia est adipisci? Accusamus vero quasi expedita animi pariatur ullam eum possimus. In, laborum quia.</p>
-            <img src="images/profile.webp" alt="Photo profile">
-        
-            <h2>Perú</h2>
-            <img src="images/flag.webp" alt="Peru's flag">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nemo quam, ipsa aspernatur blanditiis, at quidem laboriosam dolorum et aliquid totam itaque quos soluta? Pariatur aliquam nostrum ut cupiditate id!</p>
-        </section>
 
-        <section class="card">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
-                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
-                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
-                <li><a href="https://via.placeholder.com/150" target="_blank">Image Placeholder</a></li>
-            </ul>
-        </section>
-    </main>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/billy-grande-sihuay/" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=spa&id=p11-p12#p11" target="_blank">Scripture</a>
+      <a href="final-project/index.html">Final Project</a>
+    </nav>
+  </header>
 
-    <footer>
-        <p>© <span id="currentyear"></span> 🏝 Billy Grande 🏝 Perú </p>
-        <p id="lastModified"></p>
+  <main>
+    <h1>Billy Grande</h1>
 
-    </footer>
+    <div class="cards-grid">
+
+      <!-- Card 1: About Me -->
+      <section class="card">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am from Lima, Perú and I live with my two little brothers and my dad. Currently I am working as agente support for video games
+              maybe you can think that I like to play videogames all the time but I don't, just 2 games at the moment and for short periods, I like to play 
+              the guitar, play soccer, hikking and go to the beach. 
+  
+            </p>
+            <hr />
+            <h3>Your City, Your Country</h3>
+            <div class="hometown">
+              <figure>
+                <img src="images/flag.webp" alt="Official Flag of Peru" />
+                <figcaption>Official Flag of Peru</figcaption>
+              </figure>
+              <p>
+                Peru is awesome! If maybe you're thinking to go to Peru, just do it! There are many places that have different culture, weather, 
+                landscapes such as valleys, snow-capped mountains, and even jungle and for sure delicious food. 
+              </p>
+            </div>
+          </div>
+          <div class="profile-photo">
+            <img src="images/profile.webp" alt="Photo of Billy Grande" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 2: Web Dev Resources -->
+      <section class="card">
+        <h2>Web Dev Resources</h2>
+        <ul>
+          <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+          <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+          <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+          <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+          <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+          <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy;<span id="currentyear"></span> 🎋 Billy Grande 🎋 Peru
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
 </body>
 </html>
