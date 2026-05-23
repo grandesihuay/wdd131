@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Mobile-first then large-screen overrides -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <script src="scripts/temples.js" defer></script>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">⛩</span>
+        <span class="brand-text">Temple Album</span>
+      </div>
+
+      <!-- Hamburger button (visible on mobile only) -->
+      <button id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#all">Home</a></li>
+          <li><a href="#old">Old</a></li>
+          <li><a href="#new">New</a></li>
+          <li><a href="#large">Large</a></li>
+          <li><a href="#small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h1>Temples Around the World</h1>
+    <p class="subtitle">Church of Jesus Christ of Latter-day Saints</p>
+
+    <div class="gallery">
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Salt Lake Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Salt Lake Temple — Utah, USA</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Nauvoo Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Nauvoo Temple — Illinois, USA</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Rome Italy Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Rome Italy Temple — Rome, Italy</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Tokyo Japan Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Tokyo Japan Temple — Tokyo, Japan</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Sydney Australia Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Sydney Australia Temple — Sydney, Australia</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Manti Utah Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Manti Utah Temple — Manti, USA</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Paris France Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Paris France Temple — Versailles, France</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Dubai UAE Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Dubai UAE Temple — Dubai, UAE</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/templo sud.webp"
+          alt="Lima Peru Temple"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <figcaption>Lima Perú Temple — Lima, Perú</figcaption>
+      </figure>
+
+    </div><!-- /.gallery -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="current-year"></span> &mdash; <strong> 🌲Billy Grande Sihuay🌲 Lima,Peru </strong></p>
+    <p class="last-modified">Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

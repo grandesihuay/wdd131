@@ -1,0 +1,95 @@
+/* ============================================================
+   temples-large.css  —  Overrides for wider viewports
+   Loaded after temples.css; applies from 640 px upward.
+   ============================================================ */
+
+/* ── Medium screens: 2-column grid ── */
+@media (min-width: 640px) {
+
+  /* Hide hamburger; show nav inline */
+  #hamburger-btn {
+    display: none;
+  }
+
+  #main-nav {
+    width: auto;
+    max-height: none;      /* remove collapse */
+    overflow: visible;
+  }
+
+  #main-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+  }
+
+  #main-nav ul li a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  #main-nav ul li a:hover {
+    border-left-color: transparent;
+    border-bottom-color: var(--gold);
+    background-color: transparent;
+  }
+
+  /* 2-column gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  figure img {
+    height: 200px;
+  }
+}
+
+/* ── Large screens: 3-column grid ── */
+@media (min-width: 960px) {
+
+  .header-inner {
+    padding: 0.9rem 2.5rem;
+  }
+
+  .brand-text {
+    font-size: 1.65rem;
+  }
+
+  /* 3-column gallery using auto-fit for flexibility */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  figure img {
+    height: 210px;
+  }
+
+  main {
+    padding: 3.5rem 2.5rem 4rem;
+  }
+}
+
+/* ── Extra-large screens ── */
+@media (min-width: 1200px) {
+
+  .header-inner {
+    padding: 1rem 3.5rem;
+  }
+
+  main {
+    padding: 4rem 3rem 5rem;
+  }
+
+  figure img {
+    height: 230px;
+  }
+
+  figcaption {
+    font-size: 1.1rem;
+  }
+}
