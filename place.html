@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Peru – land of the Incas, Machu Picchu and vibrant Andean culture." />
+  <meta name = "author" content="Billy Grande">
+  <title>Peru – Country Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Peru</h1>
+  </header>
+
+  <main>
+    <section class="hero-section">
+
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="images/peru-wide.webp"
+          width="1400"
+          height="700" />
+        <img
+          class="hero-img"
+          src="images/peru-mobile.webp"
+          alt="Machu Picchu, the ancient Inca citadel perched among the Andes cloud forest"
+          width="600"
+          height="800" />
+      </picture>
+
+      <!-- Info panels — stacked below image (mobile) / overlaid on image (wide) -->
+      <div class="info-panels">
+
+        <!-- DATA PANEL -->
+        <div class="panel data-panel">
+          <h2>Data</h2>
+          <dl>
+            <dt>Area:</dt>          <dd>1,285,216 sq km</dd>
+            <dt>Population:</dt>    <dd>33,396,698</dd>
+            <dt>Capital:</dt>       <dd>Lima</dd>
+            <dt>Languages:</dt>     <dd>Spanish, Quechua</dd>
+            <dt>Currency:</dt>      <dd>Peruvian Sol</dd>
+            <dt>Time Zone:</dt>     <dd>UTC&minus;5</dd>
+            <dt>Calling Code:</dt>  <dd>+51</dd>
+            <dt>Internet TLD:</dt>  <dd>.pe</dd>
+          </dl>
+        </div>
+
+        <!-- WEATHER PANEL -->
+        <div class="panel weather-panel">
+          
+          <h2>Weather</h2>
+
+          <!-- SVG icon: mobile only (hidden in wide view via CSS) -->
+          <img
+            class="weather-icon-svg"
+            src="images/partly-cloudy.svg"
+            alt="Partly cloudy weather icon"
+            width="90"
+            height="90" />
+
+          <dl>
+            <dt>Temperature:</dt>  <dd>8 &deg;C</dd>
+            <dt>Conditions:</dt>   <dd>Partly Cloudy</dd>
+            <dt>Wind:</dt>         <dd>12 km/h</dd>
+            <dt>Wind Chill:</dt>   <dd><span id="wind-chill">--</span></dd>
+          </dl>
+        </div>
+
+      </div><!-- /.info-panels -->
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy;<span id="current-year"></span>
+      🦙 Billy Raul Grande 🦙
+      Peru
+    </p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

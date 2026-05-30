@@ -1,0 +1,275 @@
+
+/* ──────────────────────────────────────────
+   1. GLOBAL CSS VARIABLES
+────────────────────────────────────────── */
+:root {
+  /* Color palette */
+  --clr-primary:      #CE1126;          /* Peru flag red               */
+  --clr-primary-dark: #991020;          /* Deeper red for hover/border */
+  --clr-gold:         #C59B30;          /* Inca gold accent            */
+  --clr-gold-light:   #E8C96B;          /* Light gold highlight        */
+  --clr-white:        #FFFFFF;
+  --clr-bg:           #F5EFE0;          /* Warm parchment background   */
+  --clr-text:         #2C1B10;          /* Rich dark brown for text    */
+  --clr-text-muted:   #6B5040;
+  --clr-panel-bg:     rgba(245, 239, 224, 0.93); /* Semi-transparent parchment */
+  --clr-shadow:       rgba(44, 27, 16, 0.20);
+
+  /* Typography */
+  --ff-display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --ff-body:    'Crimson Text', Georgia, 'Times New Roman', serif;
+
+  /* Sizing & spacing */
+  --border-radius: 4px;
+  --panel-padding: 1rem 1.25rem;
+  --gap:           1rem;
+  --header-border: 5px solid var(--clr-gold);
+}
+
+/* ──────────────────────────────────────────
+   2. RESET & BASE
+────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.05rem;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ──────────────────────────────────────────
+   3. HEADER
+────────────────────────────────────────── */
+header {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem var(--gap);
+  border-bottom: var(--header-border);
+  /* Subtle diagonal-stripe texture for depth */
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(0,0,0,0.04) 0px,
+      rgba(0,0,0,0.04) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+}
+
+header h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.9rem, 6vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* ──────────────────────────────────────────
+   4. MAIN
+────────────────────────────────────────── */
+main {
+  flex: 1;
+}
+
+/* ──────────────────────────────────────────
+   5. HERO SECTION  (mobile: stacked)
+────────────────────────────────────────── */
+.hero-section {
+  position: relative;
+}
+
+/* Hero image – fills available width on mobile */
+.hero-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Visible placeholder while image loads */
+  min-height: 280px;
+  background: linear-gradient(160deg, #5E3A1A 0%, #2C1B0E 100%);
+}
+
+/* ──────────────────────────────────────────
+   6. INFO PANELS  (mobile: column, below image)
+────────────────────────────────────────── */
+.info-panels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--gap);
+  background-color: var(--clr-bg);
+}
+
+/* Shared panel card style */
+.panel {
+  background-color: var(--clr-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--clr-shadow);
+  border: 1px solid rgba(197, 155, 48, 0.25);
+}
+
+/* Panel heading strip */
+.panel h2 {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  border-bottom: 3px solid var(--clr-gold);
+}
+
+/* ──────────────────────────────────────────
+   7. DEFINITION LIST  (two-column grid)
+────────────────────────────────────────── */
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 0.35rem 0.6rem;
+  padding: var(--panel-padding);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: 600;
+  text-align: right;
+  color: var(--clr-text-muted);
+  white-space: nowrap;
+}
+
+dd {
+  margin: 0;
+  color: var(--clr-text);
+}
+
+/* ──────────────────────────────────────────
+   8. WEATHER PANEL — SVG icon (mobile only)
+────────────────────────────────────────── */
+.weather-icon-svg {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0.75rem auto 0;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.18));
+}
+
+/* ──────────────────────────────────────────
+   9. FOOTER
+────────────────────────────────────────── */
+footer {
+  background-color: var(--clr-primary);
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(0,0,0,0.04) 0px,
+      rgba(0,0,0,0.04) 2px,
+      transparent 2px,
+      transparent 10px
+    );
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem var(--gap);
+  border-top: var(--header-border);
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   10. MEDIA QUERY — Wide View  (≥ 768 px)
+       Hero image becomes full-section background;
+       info panels overlay it side-by-side.
+════════════════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+
+  /* Hero section becomes a positioning context */
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hero image fills the section at a fixed height */
+  .hero-img {
+    width: 100%;
+    height: clamp(380px, 45vw, 520px);
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  /* Info panels sit on top of the hero image */
+  .info-panels {
+    position: absolute;
+    inset: 0;                         
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    gap: 1rem;
+    background-color: transparent;   
+  }
+
+  /* Panel cards — semi-transparent parchment glass */
+  .panel {
+    background-color: var(--clr-panel-bg);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    min-width: 210px;
+    max-width: 250px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+  }
+
+  /* Data panel (distinguishes from weather) */
+  .data-panel h2 {
+    background-color: var(--clr-gold);
+    border-bottom-color: var(--clr-primary);
+    color: var(--clr-text);
+  }
+
+  /* ─────────────────────────────────────────────
+     PSEUDO-ELEMENT: weather icon emoticon in wide view
+  ───────────────────────────────────────────── */
+  .weather-panel h2::after {
+    content: " ⛅";
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    font-family: sans-serif;
+  }
+
+  /* Hide the SVG icon in wide view (replaced by ::after emoticon) */
+  .weather-icon-svg {
+    display: none;
+  }
+
+  /* Slightly smaller text inside panels to keep them compact */
+  .panel dl {
+    font-size: 0.88rem;
+  }
+}
