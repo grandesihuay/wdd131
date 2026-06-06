@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Billy Grande">
+  <meta name="description" content="Information for each temple provided"
+  <title>Temple Album – Filtered</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Mobile-first CSS order -->
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" />
+
+  <!-- Deferred JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER  -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">⛩</span>
+        <span class="brand-text">Temple Album</span>
+      </div>
+
+      <button id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#" data-filter="home" class="active">Home</a></li>
+          <li><a href="#" data-filter="old">Old</a></li>
+          <li><a href="#" data-filter="new">New</a></li>
+          <li><a href="#" data-filter="large">Large</a></li>
+          <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h1 id="gallery-title">All Temples</h1>
+    <p class="subtitle" id="temple-count"></p>
+
+    <!-- Cards injected here by filtered-temples.js -->
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="current-year"></span> &mdash; <strong>Billy Grande, Lima Peru</strong></p>
+    <p class="last-modified">Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* ============================================================
+  Overrides for wider viewports
+   Loaded after filtered-temples.css (mobile-first)
+   ============================================================ */
+
+/* ── Medium: 2-column grid, inline nav ── */
+@media (min-width: 640px) {
+
+  /* Hide hamburger; reveal nav inline */
+  #hamburger-btn { display: none; }
+
+  #main-nav {
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  #main-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0;
+  }
+
+  #main-nav ul li a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  #main-nav ul li a:hover,
+  #main-nav ul li a.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--gold);
+    background-color: transparent;
+  }
+
+  /* 2-column gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  figure img { height: 180px; }
+}
+
+/* ── Large: 3+ column grid ── */
+@media (min-width: 960px) {
+
+  .header-inner { padding: 0.9rem 2.5rem; }
+
+  .brand-text { font-size: 1.65rem; }
+
+  /* Flexible auto-fit grid: at least 260 px per card */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  figure img { height: 185px; }
+
+  main { padding: 3.5rem 2.5rem 4rem; }
+
+  .card-info h3 { font-size: 1.35rem; }
+}
+
+/* ── Extra-large ── */
+@media (min-width: 1200px) {
+
+  .header-inner { padding: 1rem 3.5rem; }
+
+  main { padding: 4rem 3rem 5rem; }
+
+  figure img { height: 200px; }
+
+  .card-info h3 { font-size: 1.4rem; }
+
+  .card-info p { font-size: 0.85rem; }
+}
