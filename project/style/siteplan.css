@@ -1,0 +1,92 @@
+/* --- Typography and General Setup --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #546A7B; /* Slate Blue */
+}
+
+/* --- Layout Setup --- */
+header {
+    background-color: #546A7B; /* Slate Blue Background */
+    color: #FFFFFF;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #FFFFFF; /* Override standard heading color for the header */
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #9EA3B0; /* Cool Steel Gray Border */
+    border-radius: 8px;
+    background-color: #F9F9F9;
+}
+
+section h2 {
+    border-bottom: 2px solid #9EA3B0; /* Cool Steel Gray Divider */
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* --- Wireframe CSS Representations --- */
+.wireframe {
+    border: 3px solid #333333;
+    margin-top: 15px;
+    background-color: #EFEFEF;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.mobile-wireframe {
+    width: 300px; /* Narrow width to represent mobile */
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-wireframe {
+    width: 100%;
+    max-width: 800px; /* Wider width to represent desktop */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wireframe internal blocks */
+.wf-header, .wf-nav, .wf-hero, .wf-content, .wf-footer, .wf-sidebar, .wf-grid {
+    padding: 20px;
+    border: 1px dashed #FFFFFF;
+    margin: 5px;
+    background-color: #9EA3B0; /* Cool Steel Gray block fills */
+    color: #FFFFFF;
+}
+
+.wf-main-layout {
+    display: flex;
+}
+
+.wf-sidebar {
+    flex: 1; /* Takes up roughly 25% of the row */
+}
+
+.wf-grid {
+    flex: 3; /* Takes up roughly 75% of the row */
+}
